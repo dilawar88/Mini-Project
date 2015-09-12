@@ -1,0 +1,22 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "sample app", '#', id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+
+        <li><%= link_to "Dashboard",   '/users/show' %></li>
+        <li><%= link_to "Cources",   '#' %></li>
+        <li><%= link_to "Profile",   '/users/edit' %></li>
+
+        <li><% if logged_in? %>
+                  <%= link_to "Log out",logout_path,method: "delete" %>
+        <li><%=link_to @user = current_user.name %></li>
+            <% else %>
+                 <%= link_to "Log in",login_path %>
+            <% end %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
