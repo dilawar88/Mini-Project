@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-before_action :logged_in_user,only: [:index, :edit, :destroy, :show   ]
-skip_before_filter :require_login,only: [:edit,:update, :show, :edit]
+before_action :logged_in_user,only: [:index, :edit, :destroy, :show, :Cources   ]
+skip_before_filter :require_login,only: [:edit,:update, :show, :edit, :Cources ]
 
   def index
     @title = "All users"
@@ -13,6 +13,11 @@ skip_before_filter :require_login,only: [:edit,:update, :show, :edit]
   end
   
 def show
+@user = User.find_by_id(params[:id])
+
+  end
+
+def Cources
 @user = User.find_by_id(params[:id])
 
   end
@@ -39,7 +44,7 @@ def show
   end
 
    def update
-    @user = User.find(params[:id])
+    @user = User.find_by_id(params[:id])
     if @user.update_attributes(params[:user])
     flash[:success] = "Profile updated."
     redirect_to @user

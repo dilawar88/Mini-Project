@@ -1,11 +1,11 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "sample app", '#', id: "logo" %>
+    <%= link_to "ELearning", '#', id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
 
         <li><%= link_to "Dashboard",   '/users/show' %></li>
-        <li><%= link_to "Cources",   '#' %></li>
+        <li><%= link_to "Cources",   'cources/Cources' %></li>
         <li><%= link_to "Profile",   '/users/edit' %></li>
 
         <li><% if logged_in? %>
