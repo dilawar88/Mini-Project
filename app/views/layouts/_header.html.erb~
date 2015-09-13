@@ -5,7 +5,7 @@
       <ul class="nav navbar-nav navbar-right">
 
         <li><%= link_to "Dashboard",   '/users/show' %></li>
-        <li><%= link_to "Cources",   'cources/Cources' %></li>
+        <li><%= link_to "Cources",   '/users/cource' %></li>
         <li><%= link_to "Profile",   '/users/edit' %></li>
 
         <li><% if logged_in? %>

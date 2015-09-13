@@ -4,7 +4,11 @@ get 'users/new'
   get 'users/show'
   get 'users/edit'
   get 'users/index'
-  get 'cources/Cources'
+  get 'users/cource'
+
+resources :users
+
+
 
 
   get 'signup' =>'users#new' 
@@ -17,7 +21,7 @@ delete 'logout' =>'sessions#destroy'
 
  
 
- resources :users
+
 root :to => 'sessions#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

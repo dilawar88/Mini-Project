@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-before_action :logged_in_user,only: [:index, :edit, :destroy, :show, :Cources   ]
-skip_before_filter :require_login,only: [:edit,:update, :show, :edit, :Cources ]
+before_action :logged_in_user,only: [:index, :edit, :destroy, :show, :cource   ]
+skip_before_filter :require_login,only: [:edit,:update, :show, :edit, :cource ]
 
   def index
     @title = "All users"
